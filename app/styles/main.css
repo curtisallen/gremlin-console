@@ -1,0 +1,13 @@
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
+}
+
+.ngViewport.ng-scope{
+    height: auto !important;
+    overflow-y: hidden;
+}
+
+.ngTopPanel.ng-scope, .ngHeaderContainer{
+    width: auto !important;
+}

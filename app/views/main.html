@@ -1,0 +1,33 @@
+<form style="padding-top: 20px;">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row collapse">
+        <div class="large-4 columns">
+          <label>Host
+            <input type="text" placeholder="localhost" ng-model="host">
+          </label>
+        </div>
+        <div class="large-4 columns">
+          <label>Port
+            <input type="text" placeholder="8182" ng-model="port" >
+          </label>        
+        </div>
+        <div class="large-4 columns">
+          <label>
+            <a class="button postfix" ng-click="connect()" ng-class="buttonClass" style="margin-top: 20px;">{{connectionStatus}}</a>  
+          </label>          
+        </div>    
+      </div>
+    </div>
+  </div>
+</form>
+<form>
+  <label> Gremlin Script
+    <div ui-ace="{ onLoad : aceLoaded }" style="height: 200px;" ng-model="script"></div>    
+  </label>
+  <a class="button small" ng-click="query()">Submit</a>
+</form>
+
+<div ng-grid="gridOptions"></div>
+
+
